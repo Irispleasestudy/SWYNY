@@ -1,0 +1,2150 @@
+{
+ "recorded_at": "2026-09-21",
+ "engine": "deepseek",
+ "scenario": {
+  "learner_role": "中国出口商代表",
+  "agent_role": "印尼雅加达进出口公司 PT Nusantara Jaya 的采购经理 Bapak Hery",
+  "product": "小家电配件（塑料外壳与电机组件）"
+ },
+ "opening": {
+  "stage": {
+   "key": "greeting",
+   "zh": "开场与建立联系",
+   "id_label": "Membuka komunikasi",
+   "task": "问候对方、自我介绍、说明来意，并使用 Bapak 或 Ibu 等恰当称谓。",
+   "criteria": [
+    {
+     "key": "honorific",
+     "zh": "使用 Bapak / Ibu 等称谓"
+    },
+    {
+     "key": "greeting",
+     "zh": "包含问候或致意"
+    },
+    {
+     "key": "purpose",
+     "zh": "说明了来意"
+    }
+   ]
+  },
+  "examples": [
+   {
+    "id": 402,
+    "ind": "Atas nama Direksi, kami menyampaikan apresiasi dan terima kasih yang sebesar-besarnya kepada para nasabah, karyawan, mitra bisnis,serta regulator,seperti Bank Indonesia(Bl) dan OJK atas kepercayaan dan kerja sama yang berkesinambungan.",
+    "ch": "我们代表董事会，向客户、员工、商业伙伴以及监管机构（如印度尼西亚银行和金融服务管理局）表示最深切的赞赏和感谢，感谢他们持续的信任与合作。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "score": 3.768
+   },
+   {
+    "id": 300,
+    "ind": "Menutup laporan Direksi, kami mengucapkan terima kasih kepada Dewan Komisaris, dan seluruh tim Grup GoTo atas dedikasi dan kerja kerasnya.",
+    "ch": "在结束董事会报告之际，我们感谢监事会以及GoTo集团全体团队的奉献和辛勤工作。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "score": 3.314
+   },
+   {
+    "id": 142,
+    "ind": "Terima kasih kepada semua pihak yang telah memberikan dukungan, kami berharap kita dapat memperluas dan memperkuat hubungan yang baik dan saling menguntungkan bagi semua untuk mengatasi semua tantangan bersama sama.",
+    "ch": "感谢所有给予支持的人士，我们希望我们能够扩大和加强良好且互惠互利的关系，共同应对所有挑战。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "score": 3.314
+   }
+  ],
+  "corpus_count": 39,
+  "reply": "Selamat pagi, Bapak. Saya Hery dari PT Nusantara Jaya. Silakan, apa yang ingin Bapak tawarkan?",
+  "reply_zh": "早上好，先生。我是 PT Nusantara Jaya 的 Hery。请说明您想提供什么。"
+ },
+ "turns": [
+  {
+   "learner": "Selamat pagi, Bapak. Perkenalkan, saya dari perusahaan eksportir di Tiongkok. Kami ingin menjajaki kerja sama pengadaan komponen untuk perusahaan Bapak.",
+   "stage_zh": "开场与建立联系",
+   "stage_key": "greeting",
+   "advanced": false,
+   "reply": "Selamat pagi, Bapak. Terima kasih atas kunjungan dan perkenalan Bapak. Saya Hery, Purchasing Manager PT Nusantara Jaya. Kami sangat terbuka untuk menjajaki kerja sama pengadaan komponen dengan perusahaan Bapak.",
+   "reply_zh": "早上好，先生。感谢您的到访和介绍。我是Hery，PT Nusantara Jaya 的采购经理。我们非常愿意与贵公司探讨零部件采购合作。",
+   "diagnosis": [
+    {
+     "type": "敬称与称谓",
+     "zh": "已正确使用 Bapak 称谓，符合商务印尼语习惯。",
+     "fix": "保持使用 Bapak。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "问候语 Selamat pagi 使用得当，语气自然礼貌。",
+     "fix": "可继续在开场时先问候再进入正题。"
+    },
+    {
+     "type": "固定搭配与术语",
+     "zh": "“menjajaki kerja sama”搭配正确，是商务印尼语中表示“探讨合作”的常用表达。",
+     "fix": "可扩展为 menjajaki peluang kerja sama 使表达更完整。"
+    },
+    {
+     "type": "小结",
+     "zh": "本句已包含问候、自我介绍和来意说明，任务完成度高。",
+     "fix": "可补充公司名称，使自我介绍更完整。"
+    }
+   ],
+   "reference": "Selamat pagi, Bapak. Perkenalkan, saya [nama] dari perusahaan eksportir di Tiongkok. Kami ingin menjajaki peluang kerja sama pengadaan komponen dengan perusahaan Bapak.",
+   "reference_zh": "早上好，先生。请允许我自我介绍，我是来自中国出口公司的[姓名]。我们希望与贵公司探讨零部件采购合作的机会。",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 4,
+    "politeness": 4,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "honorific",
+     "zh": "使用 Bapak / Ibu 等称谓",
+     "passed": true
+    },
+    {
+     "key": "greeting",
+     "zh": "包含问候或致意",
+     "passed": true
+    },
+    {
+     "key": "purpose",
+     "zh": "说明了来意",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 402,
+     "ind": "Atas nama Direksi, kami menyampaikan apresiasi dan terima kasih yang sebesar-besarnya kepada para nasabah, karyawan, mitra bisnis,serta regulator,seperti Bank Indonesia(Bl) dan OJK atas kepercayaan dan kerja sama yang berkesinambungan.",
+     "ch": "我们代表董事会，向客户、员工、商业伙伴以及监管机构（如印度尼西亚银行和金融服务管理局）表示最深切的赞赏和感谢，感谢他们持续的信任与合作。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 5.132
+    },
+    {
+     "id": 497,
+     "ind": "Atas nama Dewan Komisaris, kami menyampaikan penghargaan yang tulus kepada Direksi, jajaran manajemen, dan seluruh karyawan Telkom Indonesia atas dedikasi, kerja keras, dan komitmen dalam mewujudkan tujuan, visi, dan misi perusahaan.",
+     "ch": "我们谨代表董事会，向Telkom Indonesia的董事、管理层及全体员工致以诚挚的感谢，感谢他们为实现公司目标、愿景和使命所展现的奉献、辛勤工作和承诺。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 4.443
+    },
+    {
+     "id": 300,
+     "ind": "Menutup laporan Direksi, kami mengucapkan terima kasih kepada Dewan Komisaris, dan seluruh tim Grup GoTo atas dedikasi dan kerja kerasnya.",
+     "ch": "在结束董事会报告之际，我们感谢监事会以及GoTo集团全体团队的奉献和辛勤工作。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 4.223
+    }
+   ],
+   "used_ids": [],
+   "invalid_ids": [],
+   "cited": [],
+   "coach_note": "开场很得体，下次可加上自己的姓名和公司名称，让自我介绍更完整。",
+   "corpus_count": 39
+  },
+  {
+   "learner": "Perusahaan kami sudah berpengalaman mengekspor komponen ke beberapa negara di Asia. Kami berharap dapat bekerja sama dengan Bapak.",
+   "stage_zh": "询盘与产品规格",
+   "stage_key": "inquiry",
+   "advanced": true,
+   "reply": "Baik, Bapak, kami senang mendengar pengalaman perusahaan Bapak di pasar Asia. Boleh Bapak jelaskan jenis komponen yang biasa diekspor dan kapasitas produksinya? Kami ingin memahami kesesuaiannya dengan kebutuhan PT Nusantara Jaya.",
+   "reply_zh": "好的，先生，我们很高兴听到贵公司在亚洲市场的经验。您能说明一下通常出口的零部件类型和产能吗？我们想了解它是否符合 PT Nusantara Jaya 的需求。",
+   "diagnosis": [
+    {
+     "type": "敬称与称谓",
+     "zh": "已正确使用 Bapak，称谓得体。",
+     "fix": "保持使用 Bapak 贯穿整场谈判。"
+    },
+    {
+     "type": "固定搭配与术语",
+     "zh": "“bekerja sama dengan Bapak”表达自然，但商务语境中更常说“menjalin kerja sama”或“melanjutkan kerja sama”。",
+     "fix": "可改为：Kami berharap dapat menjalin kerja sama dengan Bapak."
+    },
+    {
+     "type": "小结",
+     "zh": "本句语法正确、语气礼貌，已包含问候与来意，基本达到开场阶段要求。",
+     "fix": "下一步可补充公司名称、具体产品与目标市场，让自我介绍更完整。"
+    }
+   ],
+   "reference": "Selamat pagi, Bapak. Perkenalkan, saya dari perusahaan eksportir di Tiongkok. Perusahaan kami sudah berpengalaman mengekspor komponen ke beberapa negara di Asia, dan kami berharap dapat menjalin kerja sama dengan Bapak.",
+   "reference_zh": "早上好，先生。请允许我介绍一下，我来自中国的一家出口公司。我们公司已有向亚洲多个国家出口零部件的经验，我们希望能与您建立合作。",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 4,
+    "politeness": 4,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "honorific",
+     "zh": "使用 Bapak / Ibu 等称谓",
+     "passed": true
+    },
+    {
+     "key": "greeting",
+     "zh": "包含问候或致意",
+     "passed": true
+    },
+    {
+     "key": "purpose",
+     "zh": "说明了来意",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 142,
+     "ind": "Terima kasih kepada semua pihak yang telah memberikan dukungan, kami berharap kita dapat memperluas dan memperkuat hubungan yang baik dan saling menguntungkan bagi semua untuk mengatasi semua tantangan bersama sama.",
+     "ch": "感谢所有给予支持的人士，我们希望我们能够扩大和加强良好且互惠互利的关系，共同应对所有挑战。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 5.586
+    },
+    {
+     "id": 402,
+     "ind": "Atas nama Direksi, kami menyampaikan apresiasi dan terima kasih yang sebesar-besarnya kepada para nasabah, karyawan, mitra bisnis,serta regulator,seperti Bank Indonesia(Bl) dan OJK atas kepercayaan dan kerja sama yang berkesinambungan.",
+     "ch": "我们代表董事会，向客户、员工、商业伙伴以及监管机构（如印度尼西亚银行和金融服务管理局）表示最深切的赞赏和感谢，感谢他们持续的信任与合作。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 5.132
+    },
+    {
+     "id": 297,
+     "ind": "Keberhasilan bisnis kami yang terus menerus sepenuhnya diatribusikan kepada para karyawan serta mitra pengemudi, pedagang, dan konsumen kami, dan memang selalu kepada merekalah kami memberikan terima kasih yang sebesar-besarnya.",
+     "ch": "我们持续不断的商业成功完全归功于我们的员工以及司机、商家和消费者合作伙伴，我们确实始终向他们表示最诚挚的感谢。",
+     "domain": "Shareholder Letter",
+     "topic": "General_Greeting",
+     "topic_zh": "问候与致意",
+     "stage": "Other",
+     "score": 4.288
+    }
+   ],
+   "used_ids": [],
+   "invalid_ids": [],
+   "cited": [],
+   "coach_note": "开场已达标：称谓、问候、来意都齐了，下一步可主动补充公司名称和具体产品，让自我介绍更完整。",
+   "corpus_count": 39
+  },
+  {
+   "learner": "Mohon informasi mengenai spesifikasi dan kualitas produknya, Bapak. Berapa jumlah minimum pemesanan yang Bapak syaratkan?",
+   "stage_zh": "询盘与产品规格",
+   "stage_key": "inquiry",
+   "advanced": false,
+   "reply": "Terima kasih atas pertanyaannya, Bapak. Untuk spesifikasi, kami biasanya meminta komponen dengan toleransi maksimal 0,05 mm dan bahan standar SNI, serta kualitas harus lulus uji QC. Mengenai jumlah minimum pemesanan, kami menetapkan MOQ 5.000 unit per jenis komponen.",
+   "reply_zh": "感谢您的提问，先生。关于规格，我们通常要求公差最大0.05毫米、材料符合SNI标准，质量必须通过QC检测。关于最小起订量，我们规定每种组件MOQ为5000件。",
+   "diagnosis": [
+    {
+     "type": "固定搭配与术语",
+     "zh": "“Mohon informasi mengenai...”表达正确，但印尼商务中更常用“Mohon informasi tentang...”或“Boleh Bapak jelaskan...”。",
+     "fix": "Mohon informasi tentang spesifikasi dan kualitas produk, Bapak."
+    },
+    {
+     "type": "敬称与称谓",
+     "zh": "称谓“Bapak”使用正确，位置也恰当。",
+     "fix": "保持使用“Bapak”即可。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "直接问“Berapa jumlah minimum pemesanan yang Bapak syaratkan?”略显生硬，可加“Mohon”使语气更礼貌。",
+     "fix": "Mohon informasi berapa jumlah minimum pemesanan yang Bapak syaratkan."
+    },
+    {
+     "type": "小结",
+     "zh": "整体表达清晰、符合询盘阶段任务，只需在礼貌用语上稍作润色。",
+     "fix": "Mohon informasi tentang spesifikasi, kualitas, dan jumlah minimum pemesanan, Bapak."
+    }
+   ],
+   "reference": "Mohon informasi tentang spesifikasi dan kualitas produk, Bapak. Selain itu, mohon dijelaskan berapa jumlah minimum pemesanan yang Bapak syaratkan.",
+   "reference_zh": "请提供关于产品规格和质量的信息，先生。此外，请说明贵方要求的最小起订量是多少。",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 3,
+    "politeness": 3,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "spec",
+     "zh": "提到了产品规格或质量",
+     "passed": true
+    },
+    {
+     "key": "quantity",
+     "zh": "确认了数量或起订量",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3500,
+     "ind": "Jenis, kapasitas, komposisi, dan jumlah peralatan utama minimal yang dibutuhkan; e.Spesifikasi teknis;",
+     "ch": "所需主要设备的最低类型、容量、组成和数量；e.技术规格；",
+     "domain": "Letter Quote",
+     "topic": "Product_Spec",
+     "topic_zh": "产品与技术规格",
+     "stage": "Inquiry",
+     "score": 3.858
+    },
+    {
+     "id": 3462,
+     "ind": "Semua harga tertera masih dapat di diskusikan sesuai keperluan perusahaan Bapak/lbu.",
+     "ch": "所有列出的价格仍可根据贵公司的需求进行商议。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Bargaining",
+     "score": 3.534
+    },
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.065
+    }
+   ],
+   "used_ids": [
+    3500
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3500,
+     "ind": "Jenis, kapasitas, komposisi, dan jumlah peralatan utama minimal yang dibutuhkan; e.Spesifikasi teknis;",
+     "ch": "所需主要设备的最低类型、容量、组成和数量；e.技术规格；",
+     "domain": "Letter Quote",
+     "topic": "Product_Spec",
+     "topic_zh": "产品与技术规格",
+     "stage": "Inquiry",
+     "trade_score": 2,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 102,
+     "score": 3.858
+    }
+   ],
+   "coach_note": "询盘阶段已达标：规格、质量和MOQ都问到了。下次可把“Mohon informasi tentang...”和“Mohon dijelaskan...”连用，让语气更商务、更礼貌。",
+   "corpus_count": 94
+  },
+  {
+   "learner": "Untuk ukuran dan kapasitas produksi, apakah bisa disesuaikan dengan kebutuhan kami, Bapak? Kami berencana memesan sekitar 3.000 unit per bulan.",
+   "stage_zh": "报价与条款",
+   "stage_key": "quotation",
+   "advanced": true,
+   "reply": "Baik, Bapak, spesifikasi ukuran dan kapasitas produksi masih bisa kami sesuaikan dengan kebutuhan Bapak. Namun untuk MOQ, kami menetapkan minimum 5.000 unit per jenis komponen, sedangkan rencana Bapak 3.000 unit per bulan bisa kami pertimbangkan sebagai pembelian reguler. Apakah Bapak bisa menjelaskan detail spesifikasi teknis yang dibutuhkan?",
+   "reply_zh": "好的，先生，尺寸规格和生产能力我们还可以根据您的需求调整。不过关于起订量，我们规定每种组件最低5,000件，而您每月3,000件的计划我们可以作为定期采购来考虑。您能说明一下所需的技术规格细节吗？",
+   "diagnosis": [
+    {
+     "type": "敬称与称谓",
+     "zh": "称呼使用得当，Bapak 用在了句末，符合商务印尼语习惯。",
+     "fix": "无需修改，保持即可。"
+    },
+    {
+     "type": "固定搭配与术语",
+     "zh": "“jumlah minimum pemesanan”表达正确，但印尼商务中更常用缩写 MOQ（Minimum Order Quantity）。",
+     "fix": "可改为“MOQ”或“jumlah minimum pemesanan (MOQ)”。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "询问规格和起订量时语气礼貌，但可加上“Mohon informasi”使请求更柔和。",
+     "fix": "Mohon informasi mengenai spesifikasi dan kualitas produknya, Bapak."
+    },
+    {
+     "type": "小结",
+     "zh": "整体表达清晰礼貌，已涉及规格、质量和数量，符合本阶段任务要求。",
+     "fix": "继续保持，注意使用 MOQ 等商务术语。"
+    }
+   ],
+   "reference": "Mohon informasi mengenai spesifikasi dan kualitas produknya, Bapak. Berapa jumlah minimum pemesanan (MOQ) yang Bapak syaratkan?",
+   "reference_zh": "请提供关于产品规格和质量的信息，先生。您要求的起订量（MOQ）是多少？",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 4,
+    "politeness": 4,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "spec",
+     "zh": "提到了产品规格或质量",
+     "passed": true
+    },
+    {
+     "key": "quantity",
+     "zh": "确认了数量或起订量",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 4.428
+    },
+    {
+     "id": 4023,
+     "ind": "Adapun harga Kerjasama yang kami tawarkan adalah sebagai berikut :",
+     "ch": "我们提供的合作价格如下：",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.534
+    },
+    {
+     "id": 3500,
+     "ind": "Jenis, kapasitas, komposisi, dan jumlah peralatan utama minimal yang dibutuhkan; e.Spesifikasi teknis;",
+     "ch": "所需主要设备的最低类型、容量、组成和数量；e.技术规格；",
+     "domain": "Letter Quote",
+     "topic": "Product_Spec",
+     "topic_zh": "产品与技术规格",
+     "stage": "Inquiry",
+     "score": 3.404
+    }
+   ],
+   "used_ids": [
+    3500
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3500,
+     "ind": "Jenis, kapasitas, komposisi, dan jumlah peralatan utama minimal yang dibutuhkan; e.Spesifikasi teknis;",
+     "ch": "所需主要设备的最低类型、容量、组成和数量；e.技术规格；",
+     "domain": "Letter Quote",
+     "topic": "Product_Spec",
+     "topic_zh": "产品与技术规格",
+     "stage": "Inquiry",
+     "trade_score": 2,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 102,
+     "score": 3.404
+    }
+   ],
+   "coach_note": "本阶段任务已完成，表达礼貌且信息完整；下次可尝试主动使用 MOQ 等缩写术语，让商务表达更地道。",
+   "corpus_count": 94
+  },
+  {
+   "learner": "Kami akan mengirimkan penawaran resmi, Bapak. Harga per unit adalah Rp 12.000, mohon dikonfirmasi apakah sudah sesuai kebutuhan Bapak.",
+   "stage_zh": "报价与条款",
+   "stage_key": "quotation",
+   "advanced": false,
+   "reply": "Terima kasih, Bapak, atas penawaran harga Rp 12.000 per unitnya. Apakah harga tersebut sudah termasuk biaya pengiriman, dan berapa lama masa berlaku penawaran ini? Kami juga ingin mengetahui syarat pembayaran yang Bapak tawarkan.",
+   "reply_zh": "谢谢您，先生，关于每件12,000印尼盾的报价。请问该价格是否已包含运费？此报价的有效期是多久？我们也想了解您提供的付款条件。",
+   "diagnosis": [
+    {
+     "type": "固定搭配与术语",
+     "zh": "“Harga per unit adalah Rp 12.000”语法正确，但商务报价中更常说“harga per unit sebesar Rp 12.000”或“kami menawarkan harga Rp 12.000 per unit”。",
+     "fix": "Harga per unit sebesar Rp 12.000."
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "“mohon dikonfirmasi apakah sudah sesuai kebutuhan Bapak”语气偏直接，作为买方询问对方报价时，可加“apakah”或“mohon penjelasan”使语气更礼貌。",
+     "fix": "Mohon penjelasan apakah harga tersebut sudah sesuai dengan kebutuhan kami."
+    },
+    {
+     "type": "小结",
+     "zh": "已涉及具体单价，但尚未确认报价有效期与生效条件，本阶段任务还未完成。",
+     "fix": "Tambahkan pertanyaan tentang masa berlaku penawaran dan syarat pembayaran."
+    }
+   ],
+   "reference": "Kami akan mengirimkan penawaran resmi, Bapak. Harga per unit sebesar Rp 12.000, mohon penjelasan apakah harga tersebut sudah sesuai dengan kebutuhan Bapak, serta berapa masa berlaku penawarannya.",
+   "reference_zh": "我们将发送正式报价，先生。每件单价为12,000印尼盾，请说明该价格是否符合您的需求，以及报价的有效期是多久。",
+   "scores": {
+    "grammar": 3,
+    "appropriateness": 3,
+    "politeness": 3,
+    "task": 2
+   },
+   "criteria": [
+    {
+     "key": "price",
+     "zh": "涉及具体价格或报价",
+     "passed": true
+    },
+    {
+     "key": "validity",
+     "zh": "确认了报价有效期或条件",
+     "passed": false
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": false,
+     "passed": 1,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 6.246
+    },
+    {
+     "id": 3861,
+     "ind": "*Harga yang tertera adalah harga per unit",
+     "ch": "所列价格为每件单价。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Other",
+     "score": 4.888
+    },
+    {
+     "id": 3487,
+     "ind": "b.Mengajukan penawaran untuk melaksanakan dan menyelesaikan seluruh pekerjaan tersebut diatas dengan persyaratan yang telah ditentukan dengan harga Rp.",
+     "ch": "b. 提交关于按照已确定的条件执行并完成上述所有工作的报价，价格为Rp。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 4.483
+    }
+   ],
+   "used_ids": [
+    3861
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3861,
+     "ind": "*Harga yang tertera adalah harga per unit",
+     "ch": "所列价格为每件单价。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Other",
+     "trade_score": 1,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 41,
+     "score": 4.888
+    }
+   ],
+   "coach_note": "你已报出单价，下一步请主动确认报价有效期和生效条件，例如“berapa lama masa berlaku penawaran ini?”。",
+   "corpus_count": 55
+  },
+  {
+   "learner": "Penawaran ini berlaku selama 30 hari sejak tanggal surat kami. Mohon informasi apakah syarat pembayaran Bapak sesuai dengan penawaran tersebut.",
+   "stage_zh": "议价",
+   "stage_key": "bargaining",
+   "advanced": true,
+   "reply": "Baik, Bapak, terima kasih atas konfirmasinya bahwa penawaran berlaku 30 hari sejak tanggal surat. Untuk syarat pembayaran, kami biasanya menggunakan transfer bank dengan DP 30% dan pelunasan 70% sebelum pengiriman. Apakah Bapak bisa mengonfirmasi harga Rp 12.000 per unit tersebut sudah termasuk biaya pengiriman atau belum?",
+   "reply_zh": "好的，先生，感谢您确认报价自函件日期起30天内有效。关于付款条件，我们通常采用银行转账，先付30%定金，余款70%在发货前付清。您能否确认每单位12,000印尼盾的价格是否已包含运费？",
+   "diagnosis": [
+    {
+     "type": "固定搭配与术语",
+     "zh": "“masa berlaku penawaran”是报价有效期的地道说法，学习者用了“berlaku selama 30 hari sejak tanggal surat kami”，表达正确但可更完整。",
+     "fix": "可改为“penawaran ini berlaku selama 30 hari kalender sejak tanggal surat penawaran ini”。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "“Mohon informasi apakah...”略显生硬，商务谈判中更常用“Mohon konfirmasi apakah...”或“Kami mohon penjelasan mengenai...”。",
+     "fix": "Mohon konfirmasi apakah syarat pembayaran kami sesuai dengan penawaran tersebut."
+    },
+    {
+     "type": "小结",
+     "zh": "本句已涉及报价有效期，任务推进良好；下一步应确认单价、总价与付款条件。",
+     "fix": "继续确认 harga per unit、total harga 与 syarat pembayaran。"
+    }
+   ],
+   "reference": "Penawaran ini berlaku selama 30 hari kalender sejak tanggal surat penawaran ini. Mohon konfirmasi apakah syarat pembayaran kami sudah sesuai dengan penawaran tersebut, Bapak.",
+   "reference_zh": "本报价自报价函发出之日起30个日历日内有效。请确认我们的付款条件是否与报价一致，先生。",
+   "scores": {
+    "grammar": 3,
+    "appropriateness": 3,
+    "politeness": 3,
+    "task": 3
+   },
+   "criteria": [
+    {
+     "key": "price",
+     "zh": "涉及具体价格或报价",
+     "passed": true
+    },
+    {
+     "key": "validity",
+     "zh": "确认了报价有效期或条件",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3496,
+     "ind": "kerja sejak SPMK.Penawaran ini berlaku selama 40 (empat puluh) hari kalender sejak tanggal surat penawaran ini.",
+     "ch": "本报价自报价函发出之日起40（四十）个日历日内有效。",
+     "domain": "Letter Quote",
+     "topic": "Validity_Conditions",
+     "topic_zh": "报价有效期与生效条件",
+     "stage": "Other",
+     "score": 7.047
+    },
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 5.792
+    },
+    {
+     "id": 3487,
+     "ind": "b.Mengajukan penawaran untuk melaksanakan dan menyelesaikan seluruh pekerjaan tersebut diatas dengan persyaratan yang telah ditentukan dengan harga Rp.",
+     "ch": "b. 提交关于按照已确定的条件执行并完成上述所有工作的报价，价格为Rp。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 4.313
+    }
+   ],
+   "used_ids": [
+    3496
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3496,
+     "ind": "kerja sejak SPMK.Penawaran ini berlaku selama 40 (empat puluh) hari kalender sejak tanggal surat penawaran ini.",
+     "ch": "本报价自报价函发出之日起40（四十）个日历日内有效。",
+     "domain": "Letter Quote",
+     "topic": "Validity_Conditions",
+     "topic_zh": "报价有效期与生效条件",
+     "stage": "Other",
+     "trade_score": 1,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 111,
+     "score": 7.047
+    }
+   ],
+   "coach_note": "报价有效期已确认，下一步请明确单价是否含运费、总价及付款条件，并注意用“Mohon konfirmasi”替代“Mohon informasi”更符合谈判语域。",
+   "corpus_count": 55
+  },
+  {
+   "learner": "Mohon maaf, harga tersebut masih di atas anggaran kami, Bapak. Apakah ada kemungkinan diskon tambahan jika kami menambah jumlah pesanan?",
+   "stage_zh": "议价",
+   "stage_key": "bargaining",
+   "advanced": false,
+   "reply": "Baik, Bapak, kami mengerti harga Rp 12.000 per unit masih di atas anggaran Bapak. Jika Bapak menambah jumlah pesanan menjadi minimal 10.000 unit per bulan, kami bisa memberikan diskon tambahan sebesar 5%. Bagaimana, apakah penawaran ini bisa dipertimbangkan?",
+   "reply_zh": "好的，先生，我们理解每件12,000印尼盾的价格仍高于贵方的预算。如果先生将订单量增加到每月至少10,000件，我们可以额外提供5%的折扣。怎么样，这个报价可以考虑吗？",
+   "diagnosis": [
+    {
+     "type": "小结",
+     "zh": "学习者提出了价格诉求（要求额外折扣）并给出了条件（增加订单量），符合本阶段任务要求。",
+     "fix": "表达清晰，可继续就折扣幅度与付款条件进一步协商。"
+    }
+   ],
+   "reference": "Mohon maaf, harga tersebut masih di atas anggaran kami, Bapak. Apakah ada kemungkinan diskon tambahan jika kami menambah jumlah pesanan?",
+   "reference_zh": "抱歉，先生，这个价格仍高于我们的预算。如果我们增加订单量，是否有可能获得额外折扣？",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 4,
+    "politeness": 4,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "ask",
+     "zh": "提出了价格诉求",
+     "passed": true
+    },
+    {
+     "key": "reason",
+     "zh": "给出了理由或条件",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 4.428
+    },
+    {
+     "id": 3817,
+     "ind": "Adapun harga Kerjasama yang kami tawarkan adalah sebagai berikut :",
+     "ch": "我们提供的合作价格如下：",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.988
+    },
+    {
+     "id": 3462,
+     "ind": "Semua harga tertera masih dapat di diskusikan sesuai keperluan perusahaan Bapak/lbu.",
+     "ch": "所有列出的价格仍可根据贵公司的需求进行商议。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Bargaining",
+     "score": 3.988
+    }
+   ],
+   "used_ids": [
+    3462
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3462,
+     "ind": "Semua harga tertera masih dapat di diskusikan sesuai keperluan perusahaan Bapak/lbu.",
+     "ch": "所有列出的价格仍可根据贵公司的需求进行商议。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Bargaining",
+     "trade_score": 1,
+     "dialogue_like": true,
+     "is_fragment": false,
+     "length": 84,
+     "score": 3.988
+    }
+   ],
+   "coach_note": "很好，你已提出折扣诉求并给出条件，接下来可尝试就折扣幅度或付款条件进一步讨价还价。",
+   "corpus_count": 112
+  },
+  {
+   "learner": "Kami memahami posisi Bapak, tetapi dengan volume 5.000 unit kami berharap ada potongan harga khusus.",
+   "stage_zh": "付款与交货",
+   "stage_key": "payment",
+   "advanced": true,
+   "reply": "Baik, Bapak, kami pahami permintaan Bapak untuk volume 5.000 unit. Sebagai bentuk kerja sama awal, kami bisa memberikan potongan harga khusus sebesar 3% dari harga Rp 12.000 per unit, dengan syarat pembayaran DP 30% dan pelunasan sebelum pengiriman. Apakah penawaran ini dapat Bapak pertimbangkan?",
+   "reply_zh": "好的，先生，我们理解您对5000件数量的要求。作为初步合作，我们可以给予每件12000印尼盾价格3%的特别折扣，条件是支付30%定金并在发货前付清余款。您能考虑这个报价吗？",
+   "diagnosis": [
+    {
+     "type": "固定搭配与术语",
+     "zh": "“potongan harga khusus”搭配正确，但未说明具体折扣幅度和条件，谈判力度不足。",
+     "fix": "建议明确折扣百分比及对应条件，例如“potongan harga khusus sebesar 3% dengan syarat...”"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "表达理解对方立场时语气礼貌，但缺少对自身条件的说明，显得让步过快。",
+     "fix": "可补充“dengan catatan”或“asalkan”来设定让步条件，保持谈判平衡。"
+    }
+   ],
+   "reference": "Kami memahami posisi Bapak, namun dengan volume 5.000 unit, kami berharap dapat diberikan potongan harga khusus sebesar 3% dengan syarat pembayaran DP 30% dan pelunasan sebelum pengiriman.",
+   "reference_zh": "我们理解您的立场，但以5000件的数量，我们希望可以获得3%的特别折扣，条件是支付30%定金并在发货前付清余款。",
+   "scores": {
+    "grammar": 3,
+    "appropriateness": 3,
+    "politeness": 4,
+    "task": 3
+   },
+   "criteria": [
+    {
+     "key": "ask",
+     "zh": "提出了价格诉求",
+     "passed": true
+    },
+    {
+     "key": "reason",
+     "zh": "给出了理由或条件",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 4.428
+    },
+    {
+     "id": 3817,
+     "ind": "Adapun harga Kerjasama yang kami tawarkan adalah sebagai berikut :",
+     "ch": "我们提供的合作价格如下：",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.988
+    },
+    {
+     "id": 4060,
+     "ind": "Dapatkan potongan harga 10% untuk pendaftaran minimal 10 Orang.",
+     "ch": "最少10人报名可享受10%的折扣。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Bargaining",
+     "score": 3.638
+    }
+   ],
+   "used_ids": [
+    3671,
+    4060
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "trade_score": 3,
+     "dialogue_like": true,
+     "is_fragment": false,
+     "length": 202,
+     "score": 4.428
+    },
+    {
+     "id": 4060,
+     "ind": "Dapatkan potongan harga 10% untuk pendaftaran minimal 10 Orang.",
+     "ch": "最少10人报名可享受10%的折扣。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Bargaining",
+     "trade_score": 1,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 63,
+     "score": 3.638
+    }
+   ],
+   "coach_note": "提出折扣时最好同时说明具体幅度和交换条件，这样谈判更有说服力。",
+   "corpus_count": 112
+  },
+  {
+   "learner": "Untuk pembayaran, kami biasa menggunakan uang muka 30 persen dan sisanya setelah pengiriman. Apakah Bapak dapat memenuhi ketentuan tersebut?",
+   "stage_zh": "付款与交货",
+   "stage_key": "payment",
+   "advanced": false,
+   "reply": "Baik, Bapak, kami mengerti bahwa Bapak biasa menggunakan DP 30% dan sisanya setelah pengiriman. Namun, untuk pesanan awal ini kami mohon pelunasan 70% dilakukan sebelum pengiriman, atau sebagai alternatif kami bisa menerima L/C at sight. Mengenai pengiriman, kami dapat mengirim dalam waktu 30 hari setelah menerima DP, dengan metode FOB Jakarta. Apakah Bapak setuju dengan ketentuan ini?",
+   "reply_zh": "好的，先生，我们理解您通常使用30%预付款、余款在发货后支付。不过对于这次首批订单，我们请求70%余款在发货前支付，或者作为替代方案我们可以接受即期信用证。关于交货，我们可以在收到预付款后30天内发货，运输方式为FOB雅加达。您是否同意这些条款？",
+   "diagnosis": [
+    {
+     "type": "固定搭配与术语",
+     "zh": "“uang muka 30 persen”表达正确，但商务合同中更常用“DP 30%”或“down payment 30%”。",
+     "fix": "可改为“DP sebesar 30%”或“uang muka sebesar 30%”。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "“Apakah Bapak dapat memenuhi ketentuan tersebut?”语气略显生硬，像在要求对方必须接受。",
+     "fix": "可改为“Apakah Bapak dapat menyetujui ketentuan tersebut?”或“Mohon konfirmasi apakah ketentuan ini dapat Bapak terima.”"
+    },
+    {
+     "type": "敬称与称谓",
+     "zh": "句中已使用“Bapak”，称谓正确。",
+     "fix": "无需修改。"
+    },
+    {
+     "type": "小结",
+     "zh": "整体表达清楚，付款条件基本明确，但可更礼貌地询问对方是否接受，并补充交货与运输方式。",
+     "fix": "建议使用“Mohon konfirmasi apakah...”等更委婉的句式。"
+    }
+   ],
+   "reference": "Untuk pembayaran, kami biasa menggunakan DP sebesar 30 persen dan sisanya setelah pengiriman. Mohon konfirmasi apakah Bapak dapat menyetujui ketentuan tersebut, Bapak.",
+   "reference_zh": "关于付款，我们通常使用30%的预付款，余款在发货后支付。请确认先生您是否能同意该条款。",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 3,
+    "politeness": 3,
+    "task": 3
+   },
+   "criteria": [
+    {
+     "key": "payment",
+     "zh": "明确了付款方式或账期",
+     "passed": true
+    },
+    {
+     "key": "delivery",
+     "zh": "明确了交期或运输方式",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3760,
+     "ind": "Klien dan Developer menanda-tangani kontrak, Klien menyetor uang muka sebesar 50% dari nilai kontrak yang disepakati kepada Developer sebagai uang muka.",
+     "ch": "客户与开发商签署合同，客户向开发商支付约定合同价值50%的预付款作为定金。",
+     "domain": "Letter Quote",
+     "topic": "Payment_Incoterms",
+     "topic_zh": "付款方式与贸易术语",
+     "stage": "Contract",
+     "score": 4.54
+    },
+    {
+     "id": 3993,
+     "ind": "Sehubungan dengan hal tersebut, berikut informasi mengenai metode pembayaran dapat ditransfer melalui Bank BRI 0046578 An Dayang Sumbi setelah melakukan pemesanan.",
+     "ch": "关于此事，以下是付款方式信息：下单后可通过BRI银行0046578账户（户名Dayang Sumbi）进行转账。",
+     "domain": "Letter Quote",
+     "topic": "Payment_Incoterms",
+     "topic_zh": "付款方式与贸易术语",
+     "stage": "Contract",
+     "score": 4.093
+    },
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.974
+    }
+   ],
+   "used_ids": [
+    3760
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3760,
+     "ind": "Klien dan Developer menanda-tangani kontrak, Klien menyetor uang muka sebesar 50% dari nilai kontrak yang disepakati kepada Developer sebagai uang muka.",
+     "ch": "客户与开发商签署合同，客户向开发商支付约定合同价值50%的预付款作为定金。",
+     "domain": "Letter Quote",
+     "topic": "Payment_Incoterms",
+     "topic_zh": "付款方式与贸易术语",
+     "stage": "Contract",
+     "trade_score": 2,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 152,
+     "score": 4.54
+    }
+   ],
+   "coach_note": "付款方式已明确，但还需确认交期或运输方式，建议下一句询问交货时间和运输方式，例如“Berapa lama waktu pengiriman dan bagaimana metode pengirimannya?”",
+   "corpus_count": 76
+  },
+  {
+   "learner": "Mohon informasi mengenai jadwal pengapalan, dan apakah harga tersebut sudah termasuk ongkos kirim sampai gudang kami.",
+   "stage_zh": "合同与确认",
+   "stage_key": "contract",
+   "advanced": true,
+   "reply": "Baik, Bapak, untuk jadwal pengapalan kami dapat mengirim dalam waktu 30 hari setelah menerima DP 30%, dengan metode FOB Jakarta. Mengenai harga Rp 12.000 per unit, harga tersebut belum termasuk ongkos kirim ke gudang Bapak, namun kami bisa menawarkan harga CIF jika Bapak menginginkan. Apakah Bapak setuju dengan ketentuan pembayaran dan pengiriman ini?",
+   "reply_zh": "好的，先生，关于装运时间，我们可以在收到30%定金后30天内发货，采用雅加达FOB方式。关于每件12,000印尼盾的价格，该价格尚未包含运至贵方仓库的运费，但如果先生需要，我们可以提供CIF报价。先生是否同意这些付款和交货条件？",
+   "diagnosis": [
+    {
+     "type": "小结",
+     "zh": "学习者本轮询问了装运时间和运费是否包含，方向正确，但尚未明确确认付款方式与账期，也未确认运输方式。",
+     "fix": "建议明确说出付款方式（如DP 30% + pelunasan sebelum pengiriman 或 L/C at sight）以及运输方式（FOB/CIF），以完成本阶段任务。"
+    }
+   ],
+   "reference": "Mohon informasi mengenai jadwal pengapalan, dan apakah harga tersebut sudah termasuk ongkos kirim sampai gudang kami, Bapak?",
+   "reference_zh": "请告知装运时间，以及该价格是否已包含运至我方仓库的运费，先生？",
+   "scores": {
+    "grammar": 3,
+    "appropriateness": 3,
+    "politeness": 3,
+    "task": 2
+   },
+   "criteria": [
+    {
+     "key": "payment",
+     "zh": "明确了付款方式或账期",
+     "passed": true
+    },
+    {
+     "key": "delivery",
+     "zh": "明确了交期或运输方式",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3882,
+     "ind": "Harga tersebut sudah termasuk ongkos kirim ke tempat Saudara.",
+     "ch": "该价格已包含运至贵处的运费。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Other",
+     "score": 4.547
+    },
+    {
+     "id": 3671,
+     "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+     "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Inquiry",
+     "score": 3.974
+    },
+    {
+     "id": 3993,
+     "ind": "Sehubungan dengan hal tersebut, berikut informasi mengenai metode pembayaran dapat ditransfer melalui Bank BRI 0046578 An Dayang Sumbi setelah melakukan pemesanan.",
+     "ch": "关于此事，以下是付款方式信息：下单后可通过BRI银行0046578账户（户名Dayang Sumbi）进行转账。",
+     "domain": "Letter Quote",
+     "topic": "Payment_Incoterms",
+     "topic_zh": "付款方式与贸易术语",
+     "stage": "Contract",
+     "score": 3.638
+    }
+   ],
+   "used_ids": [
+    3882
+   ],
+   "invalid_ids": [],
+   "cited": [
+    {
+     "id": 3882,
+     "ind": "Harga tersebut sudah termasuk ongkos kirim ke tempat Saudara.",
+     "ch": "该价格已包含运至贵处的运费。",
+     "domain": "Letter Quote",
+     "topic": "Pricing_Terms",
+     "topic_zh": "价格与报价条款",
+     "stage": "Other",
+     "trade_score": 1,
+     "dialogue_like": false,
+     "is_fragment": false,
+     "length": 61,
+     "score": 4.547
+    }
+   ],
+   "coach_note": "本轮需明确付款方式或账期，并确认交期或运输方式，建议直接说出DP 30% + pelunasan sebelum pengiriman及FOB/CIF等术语。",
+   "corpus_count": 76
+  },
+  {
+   "learner": "Terima kasih, Bapak. Kami siap menandatangani kontrak. Mohon konfirmasi jumlah akhir dan pasal pembayaran yang telah kita sepakati.",
+   "stage_zh": "合同与确认",
+   "stage_key": "contract",
+   "advanced": false,
+   "reply": "Baik, Bapak, kami konfirmasi jumlah akhir pesanan 5.000 unit per bulan dengan harga Rp 12.000 per unit, potongan khusus 3%, sehingga harga menjadi Rp 11.640 per unit. Untuk pasal pembayaran, kami sepakati DP 30% dan pelunasan 70% sebelum pengiriman, dengan pengiriman FOB Jakarta dalam 30 hari setelah DP diterima. Apakah Bapak setuju kami siapkan draf kontraknya?",
+   "reply_zh": "好的，先生，我们确认最终订单量为每月5000件，单价12,000印尼盾，特别折扣3%，因此单价变为11,640印尼盾。关于付款条款，我们约定首付30%，余款70%在发货前付清，交货方式为雅加达FOB，收到首付后30天内发货。您是否同意我们准备合同草案？",
+   "diagnosis": [
+    {
+     "type": "小结",
+     "zh": "学习者本句完成了复述与确认任务，但未逐项列出已达成条件，合同要素不够完整。",
+     "fix": "建议明确复述数量、单价、折扣、付款方式、交货方式与时间等要素。"
+    },
+    {
+     "type": "固定搭配与术语",
+     "zh": "“pasal pembayaran”可以，但商务合同中更常用“syarat pembayaran”或“ketentuan pembayaran”。",
+     "fix": "使用 syarat pembayaran 或 ketentuan pembayaran 更地道。"
+    },
+    {
+     "type": "礼貌与语气策略",
+     "zh": "“Mohon konfirmasi”已礼貌，但作为买方确认合同前，可加“kami ingin memastikan”使语气更自然。",
+     "fix": "可改为“Kami ingin memastikan jumlah akhir dan syarat pembayaran yang telah kita sepakati.”"
+    }
+   ],
+   "reference": "Terima kasih, Bapak. Kami siap menandatangani kontrak. Kami ingin memastikan jumlah akhir pesanan 5.000 unit per bulan dengan harga Rp 12.000 per unit, potongan khusus 3%, serta syarat pembayaran DP 30% dan pelunasan 70% sebelum pengiriman. Apakah Bapak dapat mengonfirmasi hal tersebut?",
+   "reference_zh": "谢谢您，先生。我们准备签署合同。我们想确认最终订单量为每月5000件，单价12,000印尼盾，特别折扣3%，以及付款条件为首付30%、余款70%发货前付清。您能否确认这些内容？",
+   "scores": {
+    "grammar": 3,
+    "appropriateness": 3,
+    "politeness": 4,
+    "task": 3
+   },
+   "criteria": [
+    {
+     "key": "contract",
+     "zh": "涉及合同或协议要素",
+     "passed": true
+    },
+    {
+     "key": "confirm",
+     "zh": "做出了确认或复述",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3992,
+     "ind": "Berdasarkan surat yang telah kami terima dengan Nomor : Pertanggal Januari 2025, kami dari PT DAYANG SUMBI dengan ini menawarkan harga dan spesifikasi produk kami, dapat dilihat pada format lampiran yang ada.",
+     "ch": "根据我们收到的编号为...、日期为2025年1月的信函，我们PT DAYANG SUMBI公司特此提供我们的产品价格和规格，详见附件格式。",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Inquiry",
+     "score": 3.413
+    },
+    {
+     "id": 3672,
+     "ind": "Besar harapan kami apabila bapak/ibu dapat mempertimbangkan penawaran kami, dan kami akan sangat menghargai kesempatan kerjasama yang dapat bapak/ibu berikan kepada perusahaan kami.",
+     "ch": "我们非常希望您能考虑我们的报价，并且我们将非常感激您给予我们公司合作的机会。",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Other",
+     "score": 3.184
+    },
+    {
+     "id": 4063,
+     "ind": "Atas perhatian dan kerjasamanya Bapak/Ibu, kami mengucapkan terima kasih.",
+     "ch": "感谢各位先生/女士的关注与合作。",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Other",
+     "score": 3.168
+    }
+   ],
+   "used_ids": [],
+   "invalid_ids": [],
+   "cited": [],
+   "coach_note": "复述合同时要逐项列出数量、价格、折扣、付款、交货等要素，并用“kami ingin memastikan”显得更专业。",
+   "corpus_count": 513
+  },
+  {
+   "learner": "Kami setuju dengan semua kesepakatan tersebut. Mohon dikirimkan draf kontraknya untuk kami pelajari.",
+   "stage_zh": "合同与确认",
+   "stage_key": "contract",
+   "advanced": false,
+   "reply": "Baik, Bapak, kami akan segera menyiapkan draf kontraknya dan mengirimkannya untuk Bapak pelajari. Kami konfirmasi kembali jumlah akhir 5.000 unit per bulan dengan harga Rp 11.640 per unit setelah potongan khusus 3%, serta pasal pembayaran DP 30% dan pelunasan 70% sebelum pengiriman, dengan pengiriman FOB Jakarta dalam 30 hari setelah DP diterima. Setelah Bapak pelajari, mohon konfirmasi agar kami dapat segera menandatangani kontrak.",
+   "reply_zh": "好的，先生，我们会尽快准备合同草案并发送给您审阅。我们再次确认最终数量为每月5000件，享受3%特别折扣后单价为11,640印尼盾，以及付款条款为30%定金、发货前付清70%余款，交货方式为雅加达FOB，收到定金后30天内发货。您审阅后请确认，以便我们尽快签署合同。",
+   "diagnosis": [
+    {
+     "type": "小结",
+     "zh": "学习者本阶段已能复述数量、价格、付款与交货条件，并推动签署合同，任务完成度高。",
+     "fix": "可进一步补充合同要素如交货期、有效期或违约责任，使复述更完整。"
+    }
+   ],
+   "reference": "Baik, Bapak, kami setuju dengan semua kesepakatan tersebut. Mohon dikirimkan draf kontraknya untuk kami pelajari.",
+   "reference_zh": "好的，先生，我们同意所有已达成的协议。请将合同草案发送给我们审阅。",
+   "scores": {
+    "grammar": 4,
+    "appropriateness": 4,
+    "politeness": 4,
+    "task": 4
+   },
+   "criteria": [
+    {
+     "key": "contract",
+     "zh": "涉及合同或协议要素",
+     "passed": true
+    },
+    {
+     "key": "confirm",
+     "zh": "做出了确认或复述",
+     "passed": true
+    }
+   ],
+   "progress": [
+    {
+     "key": "greeting",
+     "zh": "开场与建立联系",
+     "completed": true,
+     "passed": 3,
+     "total": 3
+    },
+    {
+     "key": "inquiry",
+     "zh": "询盘与产品规格",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "quotation",
+     "zh": "报价与条款",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "bargaining",
+     "zh": "议价",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "payment",
+     "zh": "付款与交货",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "contract",
+     "zh": "合同与确认",
+     "completed": true,
+     "passed": 2,
+     "total": 2
+    },
+    {
+     "key": "dispute",
+     "zh": "争议与风险（分支）",
+     "completed": false,
+     "passed": 0,
+     "total": 2
+    }
+   ],
+   "examples": [
+    {
+     "id": 3561,
+     "ind": "Dengan disampaikannya Surat Penawaran ini, maka kami menyatakan bersedia dan sanggup melaksanakan pekerjaan tersebut dan menyerahkan semua pekerjaan dimaksud sesuai dengan jadwal dan ketentuan yang telah ditentukan oleh pihak pemberi pekerjaan..",
+     "ch": "通过提交此报价函，我方声明愿意并有能力执行该工作，并按照委托方确定的日程和条款交付所有相关工作。",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Other",
+     "score": 3.388
+    },
+    {
+     "id": 3672,
+     "ind": "Besar harapan kami apabila bapak/ibu dapat mempertimbangkan penawaran kami, dan kami akan sangat menghargai kesempatan kerjasama yang dapat bapak/ibu berikan kepada perusahaan kami.",
+     "ch": "我们非常希望您能考虑我们的报价，并且我们将非常感激您给予我们公司合作的机会。",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Other",
+     "score": 3.328
+    },
+    {
+     "id": 3558,
+     "ind": "Perihal : Penawaran PekerjaanPEMBANGUNAN PAVING SDN BULUKERTO 03 Sehubungan dengan undangan Pengadaan Langsung tanggal 19 November 2021 dan setelah kami pelajari dengan saksama Dokumen Pengadaan, dengan ini kami mengajukan penawaran untuk pekerjaan PEMBANGUNAN PAVING SDN BULUKERTO 03 BATU sebesar Rp.",
+     "ch": "事由：关于SDN BULUKERTO 03铺路工程报价。根据2021年11月19日的直接采购邀请，并经过我们仔细研究采购文件后，我们特此提交关于BATU SDN BULUKERTO 03铺路工程的报价，金额为...",
+     "domain": "Letter Quote",
+     "topic": "Other",
+     "topic_zh": "其他",
+     "stage": "Other",
+     "score": 3.275
+    }
+   ],
+   "used_ids": [],
+   "invalid_ids": [],
+   "cited": [],
+   "coach_note": "您已能完整复述合同要素并推动签约，下一步可练习补充交货期、有效期等细节，使复述更全面。",
+   "corpus_count": 513
+  }
+ ],
+ "report": {
+  "turns": 12,
+  "completed_stages": [
+   "开场与建立联系",
+   "询盘与产品规格",
+   "报价与条款",
+   "议价",
+   "付款与交货",
+   "合同与确认"
+  ],
+  "average_scores": {
+   "grammar": 3.58,
+   "appropriateness": 3.42,
+   "politeness": 3.58,
+   "task": 3.33
+  },
+  "issue_counts": {
+   "敬称与称谓": 5,
+   "礼貌与语气策略": 8,
+   "固定搭配与术语": 9
+  },
+  "citation": {
+   "turns_with_citation": 8,
+   "valid": 9,
+   "invalid": 0,
+   "unique_ids": 8,
+   "valid_rate": 1
+  },
+  "corpus_used": [
+   {
+    "id": 402,
+    "ind": "Atas nama Direksi, kami menyampaikan apresiasi dan terima kasih yang sebesar-besarnya kepada para nasabah, karyawan, mitra bisnis,serta regulator,seperti Bank Indonesia(Bl) dan OJK atas kepercayaan dan kerja sama yang berkesinambungan.",
+    "ch": "我们代表董事会，向客户、员工、商业伙伴以及监管机构（如印度尼西亚银行和金融服务管理局）表示最深切的赞赏和感谢，感谢他们持续的信任与合作。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "trade_score": 0,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 235,
+    "score": 5.132
+   },
+   {
+    "id": 497,
+    "ind": "Atas nama Dewan Komisaris, kami menyampaikan penghargaan yang tulus kepada Direksi, jajaran manajemen, dan seluruh karyawan Telkom Indonesia atas dedikasi, kerja keras, dan komitmen dalam mewujudkan tujuan, visi, dan misi perusahaan.",
+    "ch": "我们谨代表董事会，向Telkom Indonesia的董事、管理层及全体员工致以诚挚的感谢，感谢他们为实现公司目标、愿景和使命所展现的奉献、辛勤工作和承诺。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 233,
+    "score": 4.443
+   },
+   {
+    "id": 300,
+    "ind": "Menutup laporan Direksi, kami mengucapkan terima kasih kepada Dewan Komisaris, dan seluruh tim Grup GoTo atas dedikasi dan kerja kerasnya.",
+    "ch": "在结束董事会报告之际，我们感谢监事会以及GoTo集团全体团队的奉献和辛勤工作。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "trade_score": 0,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 138,
+    "score": 4.223
+   },
+   {
+    "id": 142,
+    "ind": "Terima kasih kepada semua pihak yang telah memberikan dukungan, kami berharap kita dapat memperluas dan memperkuat hubungan yang baik dan saling menguntungkan bagi semua untuk mengatasi semua tantangan bersama sama.",
+    "ch": "感谢所有给予支持的人士，我们希望我们能够扩大和加强良好且互惠互利的关系，共同应对所有挑战。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "trade_score": 0,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 215,
+    "score": 5.586
+   },
+   {
+    "id": 297,
+    "ind": "Keberhasilan bisnis kami yang terus menerus sepenuhnya diatribusikan kepada para karyawan serta mitra pengemudi, pedagang, dan konsumen kami, dan memang selalu kepada merekalah kami memberikan terima kasih yang sebesar-besarnya.",
+    "ch": "我们持续不断的商业成功完全归功于我们的员工以及司机、商家和消费者合作伙伴，我们确实始终向他们表示最诚挚的感谢。",
+    "domain": "Shareholder Letter",
+    "topic": "General_Greeting",
+    "topic_zh": "问候与致意",
+    "stage": "Other",
+    "trade_score": 0,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 228,
+    "score": 4.288
+   },
+   {
+    "id": 3500,
+    "ind": "Jenis, kapasitas, komposisi, dan jumlah peralatan utama minimal yang dibutuhkan; e.Spesifikasi teknis;",
+    "ch": "所需主要设备的最低类型、容量、组成和数量；e.技术规格；",
+    "domain": "Letter Quote",
+    "topic": "Product_Spec",
+    "topic_zh": "产品与技术规格",
+    "stage": "Inquiry",
+    "trade_score": 2,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 102,
+    "score": 3.404
+   },
+   {
+    "id": 3462,
+    "ind": "Semua harga tertera masih dapat di diskusikan sesuai keperluan perusahaan Bapak/lbu.",
+    "ch": "所有列出的价格仍可根据贵公司的需求进行商议。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Bargaining",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 84,
+    "score": 3.988
+   },
+   {
+    "id": 3671,
+    "ind": "Adapun penawaran kami adalah untuk pembelian regular (berkesinambungan) dengan harga Rp 1550/KG (Seribu Lima Ratus Lima Puluh Rupiah Per Kilo Gram) dengan sistem pembayaran tunai atau via transfer bank.",
+    "ch": "我们的报价是针对定期（持续）采购，价格为每公斤1550印尼盾（每公斤一千五百五十印尼盾），付款方式为现金或银行转账。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Inquiry",
+    "trade_score": 3,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 202,
+    "score": 3.974
+   },
+   {
+    "id": 4023,
+    "ind": "Adapun harga Kerjasama yang kami tawarkan adalah sebagai berikut :",
+    "ch": "我们提供的合作价格如下：",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Inquiry",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 66,
+    "score": 3.534
+   },
+   {
+    "id": 3861,
+    "ind": "*Harga yang tertera adalah harga per unit",
+    "ch": "所列价格为每件单价。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 41,
+    "score": 4.888
+   },
+   {
+    "id": 3487,
+    "ind": "b.Mengajukan penawaran untuk melaksanakan dan menyelesaikan seluruh pekerjaan tersebut diatas dengan persyaratan yang telah ditentukan dengan harga Rp.",
+    "ch": "b. 提交关于按照已确定的条件执行并完成上述所有工作的报价，价格为Rp。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Inquiry",
+    "trade_score": 2,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 151,
+    "score": 4.313
+   },
+   {
+    "id": 3496,
+    "ind": "kerja sejak SPMK.Penawaran ini berlaku selama 40 (empat puluh) hari kalender sejak tanggal surat penawaran ini.",
+    "ch": "本报价自报价函发出之日起40（四十）个日历日内有效。",
+    "domain": "Letter Quote",
+    "topic": "Validity_Conditions",
+    "topic_zh": "报价有效期与生效条件",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 111,
+    "score": 7.047
+   },
+   {
+    "id": 3817,
+    "ind": "Adapun harga Kerjasama yang kami tawarkan adalah sebagai berikut :",
+    "ch": "我们提供的合作价格如下：",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Inquiry",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 66,
+    "score": 3.988
+   },
+   {
+    "id": 4060,
+    "ind": "Dapatkan potongan harga 10% untuk pendaftaran minimal 10 Orang.",
+    "ch": "最少10人报名可享受10%的折扣。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Bargaining",
+    "trade_score": 1,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 63,
+    "score": 3.638
+   },
+   {
+    "id": 3760,
+    "ind": "Klien dan Developer menanda-tangani kontrak, Klien menyetor uang muka sebesar 50% dari nilai kontrak yang disepakati kepada Developer sebagai uang muka.",
+    "ch": "客户与开发商签署合同，客户向开发商支付约定合同价值50%的预付款作为定金。",
+    "domain": "Letter Quote",
+    "topic": "Payment_Incoterms",
+    "topic_zh": "付款方式与贸易术语",
+    "stage": "Contract",
+    "trade_score": 2,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 152,
+    "score": 4.54
+   },
+   {
+    "id": 3993,
+    "ind": "Sehubungan dengan hal tersebut, berikut informasi mengenai metode pembayaran dapat ditransfer melalui Bank BRI 0046578 An Dayang Sumbi setelah melakukan pemesanan.",
+    "ch": "关于此事，以下是付款方式信息：下单后可通过BRI银行0046578账户（户名Dayang Sumbi）进行转账。",
+    "domain": "Letter Quote",
+    "topic": "Payment_Incoterms",
+    "topic_zh": "付款方式与贸易术语",
+    "stage": "Contract",
+    "trade_score": 1,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 163,
+    "score": 3.638
+   },
+   {
+    "id": 3882,
+    "ind": "Harga tersebut sudah termasuk ongkos kirim ke tempat Saudara.",
+    "ch": "该价格已包含运至贵处的运费。",
+    "domain": "Letter Quote",
+    "topic": "Pricing_Terms",
+    "topic_zh": "价格与报价条款",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": false,
+    "is_fragment": false,
+    "length": 61,
+    "score": 4.547
+   },
+   {
+    "id": 3992,
+    "ind": "Berdasarkan surat yang telah kami terima dengan Nomor : Pertanggal Januari 2025, kami dari PT DAYANG SUMBI dengan ini menawarkan harga dan spesifikasi produk kami, dapat dilihat pada format lampiran yang ada.",
+    "ch": "根据我们收到的编号为...、日期为2025年1月的信函，我们PT DAYANG SUMBI公司特此提供我们的产品价格和规格，详见附件格式。",
+    "domain": "Letter Quote",
+    "topic": "Other",
+    "topic_zh": "其他",
+    "stage": "Inquiry",
+    "trade_score": 2,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 208,
+    "score": 3.413
+   },
+   {
+    "id": 3672,
+    "ind": "Besar harapan kami apabila bapak/ibu dapat mempertimbangkan penawaran kami, dan kami akan sangat menghargai kesempatan kerjasama yang dapat bapak/ibu berikan kepada perusahaan kami.",
+    "ch": "我们非常希望您能考虑我们的报价，并且我们将非常感激您给予我们公司合作的机会。",
+    "domain": "Letter Quote",
+    "topic": "Other",
+    "topic_zh": "其他",
+    "stage": "Other",
+    "trade_score": 2,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 181,
+    "score": 3.328
+   },
+   {
+    "id": 4063,
+    "ind": "Atas perhatian dan kerjasamanya Bapak/Ibu, kami mengucapkan terima kasih.",
+    "ch": "感谢各位先生/女士的关注与合作。",
+    "domain": "Letter Quote",
+    "topic": "Other",
+    "topic_zh": "其他",
+    "stage": "Other",
+    "trade_score": 0,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 73,
+    "score": 3.168
+   },
+   {
+    "id": 3561,
+    "ind": "Dengan disampaikannya Surat Penawaran ini, maka kami menyatakan bersedia dan sanggup melaksanakan pekerjaan tersebut dan menyerahkan semua pekerjaan dimaksud sesuai dengan jadwal dan ketentuan yang telah ditentukan oleh pihak pemberi pekerjaan..",
+    "ch": "通过提交此报价函，我方声明愿意并有能力执行该工作，并按照委托方确定的日程和条款交付所有相关工作。",
+    "domain": "Letter Quote",
+    "topic": "Other",
+    "topic_zh": "其他",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 245,
+    "score": 3.388
+   },
+   {
+    "id": 3558,
+    "ind": "Perihal : Penawaran PekerjaanPEMBANGUNAN PAVING SDN BULUKERTO 03 Sehubungan dengan undangan Pengadaan Langsung tanggal 19 November 2021 dan setelah kami pelajari dengan saksama Dokumen Pengadaan, dengan ini kami mengajukan penawaran untuk pekerjaan PEMBANGUNAN PAVING SDN BULUKERTO 03 BATU sebesar Rp.",
+    "ch": "事由：关于SDN BULUKERTO 03铺路工程报价。根据2021年11月19日的直接采购邀请，并经过我们仔细研究采购文件后，我们特此提交关于BATU SDN BULUKERTO 03铺路工程的报价，金额为...",
+    "domain": "Letter Quote",
+    "topic": "Other",
+    "topic_zh": "其他",
+    "stage": "Other",
+    "trade_score": 1,
+    "dialogue_like": true,
+    "is_fragment": false,
+    "length": 301,
+    "score": 3.275
+   }
+  ],
+  "next_focus": "争议与风险（分支）"
+ }
+}
